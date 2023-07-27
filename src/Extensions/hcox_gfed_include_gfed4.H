@@ -55,14 +55,14 @@ Inst%GFED4_EMFAC(1,4)=9.30E-02_hp
 Inst%GFED4_EMFAC(1,5)=2.10E-01_hp
 Inst%GFED4_EMFAC(1,6)=1.02E-01_hp
 
-! ALK4 (Higher_Alkanes)
+! ALK4 (Higher_Alkanes) - convert from kgC to kg
 GFED4_SPEC_NAME(2)="ALK4"
-Inst%GFED4_EMFAC(2,1)=5.50E-05_hp
-Inst%GFED4_EMFAC(2,2)=3.49E-04_hp
-Inst%GFED4_EMFAC(2,3)=2.25E-04_hp
-Inst%GFED4_EMFAC(2,4)=7.20E-05_hp
-Inst%GFED4_EMFAC(2,5)=7.20E-05_hp
-Inst%GFED4_EMFAC(2,6)=3.40E-04_hp
+Inst%GFED4_EMFAC(2,1)=5.50E-05_hp * 58.12_hp/(4.3_hp*12.0_hp)
+Inst%GFED4_EMFAC(2,2)=3.49E-04_hp * 58.12_hp/(4.3_hp*12.0_hp)
+Inst%GFED4_EMFAC(2,3)=2.25E-04_hp * 58.12_hp/(4.3_hp*12.0_hp)
+Inst%GFED4_EMFAC(2,4)=7.20E-05_hp * 58.12_hp/(4.3_hp*12.0_hp)
+Inst%GFED4_EMFAC(2,5)=7.20E-05_hp * 58.12_hp/(4.3_hp*12.0_hp)
+Inst%GFED4_EMFAC(2,6)=3.40E-04_hp * 58.12_hp/(4.3_hp*12.0_hp)
 
 ! ACET (C3H6O)
 GFED4_SPEC_NAME(3)="ACET"
@@ -93,12 +93,12 @@ Inst%GFED4_EMFAC(5,6)=1.24E-03_hp
 
 ! PRPE (C3H6 + Higher_Alkenes)
 GFED4_SPEC_NAME(6)="PRPE"
-Inst%GFED4_EMFAC(6,1)=7.90E-04_hp + 1.33E-04_hp
-Inst%GFED4_EMFAC(6,2)=1.13E-03_hp + 3.85E-04_hp
-Inst%GFED4_EMFAC(6,3)=6.10E-04_hp + 3.69E-04_hp
-Inst%GFED4_EMFAC(6,4)=6.40E-04_hp + 2.67E-04_hp
-Inst%GFED4_EMFAC(6,5)=3.05E-03_hp + 2.27E-04_hp
-Inst%GFED4_EMFAC(6,6)=6.80E-04_hp + 3.33E-04_hp
+Inst%GFED4_EMFAC(6,1)=7.90E-04_hp + 1.33E-04_hp * 42.08_hp/(3.0_hp*12.0_hp)
+Inst%GFED4_EMFAC(6,2)=1.13E-03_hp + 3.85E-04_hp * 42.08_hp/(3.0_hp*12.0_hp)
+Inst%GFED4_EMFAC(6,3)=6.10E-04_hp + 3.69E-04_hp * 42.08_hp/(3.0_hp*12.0_hp)
+Inst%GFED4_EMFAC(6,4)=6.40E-04_hp + 2.67E-04_hp * 42.08_hp/(3.0_hp*12.0_hp)
+Inst%GFED4_EMFAC(6,5)=3.05E-03_hp + 2.27E-04_hp * 42.08_hp/(3.0_hp*12.0_hp)
+Inst%GFED4_EMFAC(6,6)=6.80E-04_hp + 3.33E-04_hp * 42.08_hp/(3.0_hp*12.0_hp)
 
 ! C3H8
 GFED4_SPEC_NAME(7)="C3H8"
